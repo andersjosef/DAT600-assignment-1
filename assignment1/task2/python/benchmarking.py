@@ -16,7 +16,7 @@ def plot_sort(sortFunc, name, max, step):
     init_csv(fileName)
     Yaxis = []
     Xaxis = []
-    for i in range(1, max, step):
+    for i in range(1, max+1, step):
         nums = list(range(i, 0, -1))
         start_time = time.perf_counter()
         sortFunc(nums)
@@ -28,7 +28,7 @@ def plot_sort(sortFunc, name, max, step):
 
     plt.plot(Xaxis, Yaxis, label=name)
 
-n = 10000
+n = 1000
 step = 10
 plot_sort(heap_sort, "Heap", n, step)
 plot_sort(insertion_sort, "Insertion", n, step)
