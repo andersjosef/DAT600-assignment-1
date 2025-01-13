@@ -73,7 +73,7 @@ def parent(i):
 def max_heapify(A:Heap, i):
     l = left(i)
     r = right(i)
-    if l <= A.heap_size and A.array[r] > A.array[i]:
+    if l <= A.heap_size and A.array[l] > A.array[i]:
         largest = l
     else:
         largest = i
@@ -89,7 +89,7 @@ def max_heapify(A:Heap, i):
 
 def build_max_heap(A:Heap, n):
     A.heap_size = n
-    for i in range(n//2, 1, -1):
+    for i in range(n//2, -1, -1): # Down to and including 0
         max_heapify(A, i)
 
 def heap_sort_internal(A:Heap, n):
