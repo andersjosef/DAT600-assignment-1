@@ -102,7 +102,6 @@ def heap_sort_internal(A:Heap, n):
 def heap_sort(array):
     heap = Heap(array=array)
     heap_sort_internal(heap, len(heap.array)-1)
-    array = heap.array
 
 
 # # Quick Sort
