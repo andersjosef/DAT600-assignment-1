@@ -1,4 +1,5 @@
 public class SortingAlgorithms {
+    // The one called by the end user
     public static void insertion_sort(int[] n) {
         for (int j = 1; j < n.length; j++)
         {
