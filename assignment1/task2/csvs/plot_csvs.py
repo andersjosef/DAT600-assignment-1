@@ -27,3 +27,10 @@ for file in glob.glob("*.csv"):
     data[name] = dict(zip(n_list, time_list))
 
 
+for i in range(1, 1000, 100):
+    print(f"{i} & {data["java-insertion"][i]:.2e} & {data["python-insertion"][i]:.2e} & {round(data["python-insertion"][i]/data["java-insertion"][i]*100,2)} \\\\")
+    print("\\hline")
+
+for i in range(1, 1000, 100):
+    print(f"{i} & {data["java-heap"][i]:.2e} & {data["python-heap"][i]:.2e} & {round(data["python-heap"][i]/data["java-heap"][i]*100,2)} \\\\")
+    print("\\hline")
